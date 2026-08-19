@@ -7,12 +7,15 @@ import { AuthContext } from './context/AuthProvider'
 const App = () => {
 
  const [user,setUser]=useState(null)
+ const authData = useContext(AuthContext)
+//  console.log(authData)
+
 
  const handleLogin =(email,pasword)=>{
   if(email == 'admin@me.com' && pasword == '123'){
     // console.log('this is admin')
     setUser('admin')
-  }else if(email == 'user@me.com' && pasword == '123'){
+  }else if(authData && authData.employees.find((e)=> email == e.email && e.password == pasword)){
     // console.log("this is user")
     setUser('employee')
   }
@@ -20,9 +23,6 @@ const App = () => {
     alert("invalid")
   }
  }
- 
- const data = useContext(AuthContext)
- console.log(data)
 
 
 
