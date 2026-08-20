@@ -1,8 +1,15 @@
-const employees = [ 
-  { 
-    "id": 1, 
-    "email": "employee1@example.com", 
+const employees = [
+  {
+    "id": 1,
+    "firstname": "Rahul",
+    "email": "e@e.com",
     "password": "123",
+    "taskNumber": {
+      "active": 2,
+      "newTask": 1,
+      "completedTask": 0,
+      "failed": 0
+    },
     "tasks": [
       {
         "active": true,
@@ -23,44 +30,21 @@ const employees = [
         "task description": "Follow up with the client regarding the pending project requirements.",
         "task date": "2026-08-17",
         "categories": "Communication"
-      },
-      {
-        "active": false,
-        "new task": false,
-        "complitedtask": true,
-        "failed": false,
-        "task title": "Update Customer Records",
-        "task description": "Review and update customer contact information in the system.",
-        "task date": "2026-08-14",
-        "categories": "Database"
-      },
-      {
-        "active": false,
-        "new task": false,
-        "complitedtask": false,
-        "failed": true,
-        "task title": "Submit Monthly Expenses",
-        "task description": "Submit all monthly business expenses with the required receipts.",
-        "task date": "2026-08-12",
-        "categories": "Finance"
-      },
-      {
-        "active": true,
-        "new task": false,
-        "complitedtask": false,
-        "failed": false,
-        "task title": "Team Meeting Preparation",
-        "task description": "Prepare the agenda for the upcoming team meeting.",
-        "task date": "2026-08-18",
-        "categories": "Meeting"
       }
     ]
-  }, 
+  },
 
-  { 
-    "id": 2, 
-    "email": "employee2@example.com", 
+  {
+    "id": 2,
+    "firstname": "Aman",
+    "email": "employee2@example.com",
     "password": "123",
+    "taskNumber": {
+      "active": 2,
+      "newTask": 1,
+      "completedTask": 0,
+      "failed": 0
+    },
     "tasks": [
       {
         "active": true,
@@ -81,44 +65,21 @@ const employees = [
         "task description": "Create reusable buttons, cards and input components.",
         "task date": "2026-08-17",
         "categories": "UI/UX"
-      },
-      {
-        "active": false,
-        "new task": false,
-        "complitedtask": true,
-        "failed": false,
-        "task title": "Create Login Screen",
-        "task description": "Design and finalize the employee login screen.",
-        "task date": "2026-08-13",
-        "categories": "Design"
-      },
-      {
-        "active": false,
-        "new task": false,
-        "complitedtask": true,
-        "failed": false,
-        "task title": "Review Brand Colors",
-        "task description": "Review the existing brand colors and update the design guidelines.",
-        "task date": "2026-08-11",
-        "categories": "Branding"
-      },
-      {
-        "active": true,
-        "new task": false,
-        "complitedtask": false,
-        "failed": false,
-        "task title": "Mobile Layout",
-        "task description": "Create responsive layouts for mobile and tablet devices.",
-        "task date": "2026-08-19",
-        "categories": "Responsive Design"
       }
     ]
-  }, 
+  },
 
-  { 
-    "id": 3, 
-    "email": "employee3@example.com", 
+  {
+    "id": 3,
+    "firstname": "Arjun",
+    "email": "employee3@example.com",
     "password": "123",
+    "taskNumber": {
+      "active": 2,
+      "newTask": 1,
+      "completedTask": 0,
+      "failed": 0
+    },
     "tasks": [
       {
         "active": true,
@@ -139,44 +100,21 @@ const employees = [
         "task description": "Develop API endpoints required for the employee dashboard.",
         "task date": "2026-08-18",
         "categories": "Backend"
-      },
-      {
-        "active": false,
-        "new task": false,
-        "complitedtask": true,
-        "failed": false,
-        "task title": "Database Setup",
-        "task description": "Configure the development database and required tables.",
-        "task date": "2026-08-12",
-        "categories": "Database"
-      },
-      {
-        "active": false,
-        "new task": false,
-        "complitedtask": false,
-        "failed": true,
-        "task title": "Deploy Test Server",
-        "task description": "Deploy the latest application build to the testing server.",
-        "task date": "2026-08-10",
-        "categories": "DevOps"
-      },
-      {
-        "active": true,
-        "new task": false,
-        "complitedtask": false,
-        "failed": false,
-        "task title": "API Documentation",
-        "task description": "Document all newly created API endpoints.",
-        "task date": "2026-08-20",
-        "categories": "Documentation"
       }
     ]
-  }, 
+  },
 
-  { 
-    "id": 4, 
-    "email": "employee4@example.com", 
+  {
+    "id": 4,
+    "firstname": "Vikram",
+    "email": "employee4@example.com",
     "password": "123",
+    "taskNumber": {
+      "active": 2,
+      "newTask": 1,
+      "completedTask": 0,
+      "failed": 0
+    },
     "tasks": [
       {
         "active": true,
@@ -197,44 +135,21 @@ const employees = [
         "task description": "Prepare social media posts for the next seven days.",
         "task date": "2026-08-17",
         "categories": "Social Media"
-      },
-      {
-        "active": false,
-        "new task": false,
-        "complitedtask": true,
-        "failed": false,
-        "task title": "Competitor Research",
-        "task description": "Research competitors and summarize their marketing strategies.",
-        "task date": "2026-08-13",
-        "categories": "Research"
-      },
-      {
-        "active": false,
-        "new task": false,
-        "complitedtask": true,
-        "failed": false,
-        "task title": "Email Campaign",
-        "task description": "Create and schedule the monthly customer email campaign.",
-        "task date": "2026-08-09",
-        "categories": "Email Marketing"
-      },
-      {
-        "active": true,
-        "new task": false,
-        "complitedtask": false,
-        "failed": false,
-        "task title": "Product Launch Meeting",
-        "task description": "Prepare materials for the product launch meeting.",
-        "task date": "2026-08-21",
-        "categories": "Product Launch"
       }
     ]
-  }, 
+  },
 
-  { 
-    "id": 5, 
-    "email": "employee5@example.com", 
+  {
+    "id": 5,
+    "firstname": "Rohan",
+    "email": "employee5@example.com",
     "password": "123",
+    "taskNumber": {
+      "active": 2,
+      "newTask": 1,
+      "completedTask": 0,
+      "failed": 0
+    },
     "tasks": [
       {
         "active": true,
@@ -255,40 +170,10 @@ const employees = [
         "task description": "Resolve pending customer support tickets assigned to the team.",
         "task date": "2026-08-17",
         "categories": "Support"
-      },
-      {
-        "active": false,
-        "new task": false,
-        "complitedtask": true,
-        "failed": false,
-        "task title": "Customer Feedback",
-        "task description": "Collect and organize feedback received from customers.",
-        "task date": "2026-08-13",
-        "categories": "Feedback"
-      },
-      {
-        "active": false,
-        "new task": false,
-        "complitedtask": false,
-        "failed": true,
-        "task title": "Weekly Support Report",
-        "task description": "Prepare the weekly report containing ticket statistics.",
-        "task date": "2026-08-11",
-        "categories": "Reporting"
-      },
-      {
-        "active": true,
-        "new task": false,
-        "complitedtask": false,
-        "failed": false,
-        "task title": "Update FAQ",
-        "task description": "Update the frequently asked questions based on recent queries.",
-        "task date": "2026-08-19",
-        "categories": "Documentation"
       }
     ]
-  } 
-]; 
+  }
+];
 
 
 const admins = [ 
