@@ -1,7 +1,7 @@
 import Login from './components/Auth/Login'
 import EmployeDashboard from './components/Dashboard/EmployeDashboard'
 import AdminDashboard from './components/Dashboard/AdminDashboard'
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { AuthContext } from './context/AuthProvider'
 
 const App = () => {
@@ -9,8 +9,18 @@ const App = () => {
  const [user,setUser]=useState(null)
  const [logInUserData,setLoginUserData] =useState(null)
  const authData = useContext(AuthContext)
-//  console.log(authData)
+ console.log(authData)
+ useEffect(()=>{
+  const loggedInUser = localStorage.getItem('loggedInUser')
+  // console.log(loggedInUser)
+  if(loggedInUser){
+  const userData = JSON.parse(loggedInUser)
+  // console.log(userData.role)
+  setUser(userData.role)
+  setLoginUserData(userData.data)
 
+  }
+ },[])
 
  const handleLogin =(email,pasword)=>{
   if(email == 'admin@me.com' && pasword == '123'){
@@ -24,7 +34,7 @@ const App = () => {
      if(employee){
       setUser('employee')
       setLoginUserData(employee)
-       localStorage.setItem('loggedInUser', JSON.stringify({role:'admin'}))
+       localStorage.setItem('loggedInUser', JSON.stringify({role:'employee',data:employee}))
       }
   }
   else{
