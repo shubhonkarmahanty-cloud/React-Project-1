@@ -13,22 +13,22 @@ const employees = [
     "tasks": [
       {
         "active": true,
-        "new task": true,
+        "newtask": true,
         "complitedtask": false,
         "failed": false,
-        "task title": "Complete Sales Report",
-        "task description": "Prepare and submit the weekly sales performance report.",
-        "task date": "2026-08-16",
+        "tasktitle": "Complete Sales Report",
+        "taskdescription": "Prepare and submit the weekly sales performance report.",
+        "taskdate": "2026-08-16",
         "categories": "Reporting"
       },
       {
         "active": true,
-        "new task": false,
+        "newtask": false,
         "complitedtask": false,
         "failed": false,
-        "task title": "Client Follow-up",
-        "task description": "Follow up with the client regarding the pending project requirements.",
-        "task date": "2026-08-17",
+        "tasktitle": "Client Follow-up",
+        "taskdescription": "Follow up with the client regarding the pending project requirements.",
+        "taskdate": "2026-08-17",
         "categories": "Communication"
       }
     ]
@@ -47,23 +47,23 @@ const employees = [
     },
     "tasks": [
       {
-        "active": true,
-        "new task": true,
+        "active": false,
+        "newtask": true,
         "complitedtask": false,
         "failed": false,
-        "task title": "Design Homepage",
-        "task description": "Create the initial design for the company homepage.",
-        "task date": "2026-08-16",
+        "tasktitle": "Design Homepage",
+        "taskdescription": "Create the initial design for the company homepage.",
+        "taskdate": "2026-08-16",
         "categories": "Design"
       },
       {
         "active": true,
-        "new task": false,
+        "newtask": false,
         "complitedtask": false,
         "failed": false,
-        "task title": "Prepare UI Components",
-        "task description": "Create reusable buttons, cards and input components.",
-        "task date": "2026-08-17",
+        "tasktitle": "Prepare UI Components",
+        "taskdescription": "Create reusable buttons, cards and input components.",
+        "taskdate": "2026-08-17",
         "categories": "UI/UX"
       }
     ]
@@ -77,28 +77,28 @@ const employees = [
     "taskNumber": {
       "active": 2,
       "newTask": 1,
-      "completedTask": 0,
+      "completedTask": 3,
       "failed": 0
     },
     "tasks": [
       {
         "active": true,
-        "new task": true,
+        "newtask": true,
         "complitedtask": false,
         "failed": false,
-        "task title": "Fix Login Bug",
-        "task description": "Investigate and fix the authentication issue reported by users.",
-        "task date": "2026-08-16",
+        "tasktitle": "Fix Login Bug",
+        "taskdescription": "Investigate and fix the authentication issue reported by users.",
+        "taskdate": "2026-08-16",
         "categories": "Bug Fix"
       },
       {
-        "active": true,
-        "new task": false,
+        "active": false,
+        "newtask": true,
         "complitedtask": false,
         "failed": false,
-        "task title": "Build Dashboard API",
-        "task description": "Develop API endpoints required for the employee dashboard.",
-        "task date": "2026-08-18",
+        "tasktitle": "Build Dashboard API",
+        "taskdescription": "Develop API endpoints required for the employee dashboard.",
+        "taskdate": "2026-08-18",
         "categories": "Backend"
       }
     ]
@@ -112,28 +112,28 @@ const employees = [
     "taskNumber": {
       "active": 2,
       "newTask": 1,
-      "completedTask": 0,
-      "failed": 0
+      "completedTask": 1,
+      "failed": 1
     },
     "tasks": [
       {
-        "active": true,
-        "new task": true,
+        "active": false,
+        "newtask": true,
         "complitedtask": false,
         "failed": false,
-        "task title": "Prepare Marketing Plan",
-        "task description": "Create a marketing plan for the upcoming product launch.",
-        "task date": "2026-08-16",
+        "tasktitle": "Prepare Marketing Plan",
+        "taskdescription": "Create a marketing plan for the upcoming product launch.",
+        "taskdate": "2026-08-16",
         "categories": "Marketing"
       },
       {
-        "active": true,
-        "new task": false,
-        "complitedtask": false,
+        "active": false,
+        "newtask": false,
+        "complitedtask": true,
         "failed": false,
-        "task title": "Social Media Content",
-        "task description": "Prepare social media posts for the next seven days.",
-        "task date": "2026-08-17",
+        "tasktitle": "Social Media Content",
+        "taskdescription": "Prepare social media posts for the next seven days.",
+        "taskdate": "2026-08-17",
         "categories": "Social Media"
       }
     ]
@@ -147,28 +147,28 @@ const employees = [
     "taskNumber": {
       "active": 2,
       "newTask": 1,
-      "completedTask": 0,
+      "completedTask": 2,
       "failed": 0
     },
     "tasks": [
       {
         "active": true,
-        "new task": true,
+        "newtask": true,
         "complitedtask": false,
         "failed": false,
-        "task title": "Customer Support Review",
-        "task description": "Review open customer support tickets and prioritize urgent issues.",
-        "task date": "2026-08-16",
+        "tasktitle": "Customer Support Review",
+        "taskdescription": "Review open customer support tickets and prioritize urgent issues.",
+        "taskdate": "2026-08-16",
         "categories": "Customer Support"
       },
       {
         "active": true,
-        "new task": false,
+        "newtask": false,
         "complitedtask": false,
         "failed": false,
-        "task title": "Resolve Support Tickets",
-        "task description": "Resolve pending customer support tickets assigned to the team.",
-        "task date": "2026-08-17",
+        "tasktitle": "Resolve Support Tickets",
+        "taskdescription": "Resolve pending customer support tickets assigned to the team.",
+        "taskdate": "2026-08-17",
         "categories": "Support"
       }
     ]
@@ -194,3 +194,5 @@ export const  getLocalStorage = ()=>{
   //  console.log(employees,admin)
   return {employees,admin}
 }
+// localStorage.clear()
+

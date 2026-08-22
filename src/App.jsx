@@ -9,7 +9,7 @@ const App = () => {
  const [user,setUser]=useState(null)
  const [logInUserData,setLoginUserData] =useState(null)
  const authData = useContext(AuthContext)
- console.log(authData)
+//  console.log(authData)
  useEffect(()=>{
   const loggedInUser = localStorage.getItem('loggedInUser')
   // console.log(loggedInUser)
@@ -21,7 +21,6 @@ const App = () => {
 
   }
  },[])
-
  const handleLogin =(email,pasword)=>{
   if(email == 'admin@me.com' && pasword == '123'){
     // conso le.log('this is admin')

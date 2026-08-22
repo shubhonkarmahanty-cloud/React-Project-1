@@ -1,4 +1,3 @@
-import React from 'react'
 import AcceptTask from './AcceptTask'
 import CompleteTask from './CompleteTask'
 import FaildTask from './FaildTask'
@@ -11,16 +10,16 @@ const TaskList = ({data}) => {
       {data.tasks.map((e,idx)=>{
         // console.log(e)
         if(e.active){
-          return <AcceptTask key={idx} />
+          return <AcceptTask key={idx} data = {e} />
         }
-        if(e.newTask){
-          return <NewTask key={idx} />
+        if(e.newtask){
+          return <NewTask key={idx} data = {e} />
         }
-        if(e.completed){
-          return <CompleteTask key={idx} />
+        if(e.complitedtask){
+          return <CompleteTask key={idx} data = {e} />
         }
         if(e.failed){
-          return <FaildTask key={idx} />
+          return <FaildTask key={idx} data = {e} />
         }
       })}
     </div>
