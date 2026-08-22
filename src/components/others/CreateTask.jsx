@@ -1,6 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { AuthContext } from '../../context/AuthProvider'
 
 const CreateTask = () => {
+
+ const [userData,setUserData]= useContext(AuthContext)
 
   const [taskTitle,setTasktitle] = useState('')
   const [taskDescription,setTaskDescription] = useState('')
@@ -8,9 +11,23 @@ const CreateTask = () => {
   const [asignTo,setAsignTo] = useState('')
   const [category,setCategory] = useState('')
 
-  const [task , setTask] = useState([])
+  const [newTask , setNewTask] = useState({})
   const submitHandler = (e)=>{
     e.preventDefault()
+    setNewTask({taskTitle,taskDescription,taskDate,category,active:false,newTask:true,failed:false,complited:false})
+    let data = userData.employees
+    data.forEach((e)=>{
+      // console.log(e.firstname)
+      if(asignTo == e.firstname){
+       e.tasks.push(newTask)
+      }
+    })
+
+    setTasktitle('')
+    setTaskDescription('')
+    setTaskDate('')
+    setAsignTo('')
+    setCategory('')
   }
   return (
      <div className='p-5 bg-[#1C1C1C] mt-7 rounded'>
